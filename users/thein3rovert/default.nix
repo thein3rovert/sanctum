@@ -21,8 +21,8 @@
         git = {
           enable = true;
           difftastic.enable = true;
-          userName = "thein3rovert";
-          userEmail = "danielolaibi@gmail.com";
+          # userName = "thein3rovert";
+          # userEmail = "danielolaibi@gmail.com";
           aliases = {
             st = "status";
             logd = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
