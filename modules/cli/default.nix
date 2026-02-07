@@ -63,22 +63,22 @@
   };
 
   home.packages = with pkgs; [
-    agenix-cli
+    # agenix-cli
     alejandra
     btop
-    comma
+    # comma
     coreutils
-    devenv
+    # devenv
     fd
     httpie
     jq
     just
     lazygit
     nix-index
-    progress
+    # progress
     ripgrep
     tldr
-    trash-cli
+    # trash-cli
     unzip
     zip
   ];
