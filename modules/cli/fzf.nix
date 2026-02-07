@@ -3,15 +3,17 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.features.cli.tools.fzf;
-in {
+in
+{
   options.features.cli.tools.fzf.enable = mkEnableOption "enable fuzzy finder";
 
   config = mkIf cfg.enable {
     programs.fzf = {
       enable = true;
-      enableFishIntegration = true;
+      enableZshIntegration = true;
       colors = {
         "fg" = "#f8f8f2";
         "bg" = "#282a36";
