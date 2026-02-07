@@ -29,7 +29,7 @@
           };
           extraConfig = {
             core.excludesfile = "~/.gitignore_global";
-            init.defaultBranch = "master";
+            init.defaultBranch = "main";
           };
         };
 
