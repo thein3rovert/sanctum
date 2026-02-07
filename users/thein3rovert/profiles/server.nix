@@ -2,7 +2,7 @@
 {
   features = {
     cli = {
-      shell.nushell.enable = true;
+      # shell.nushell.enable = true;
       shell.nitch.enable = true;
       tools.fzf.enable = true;
     };
@@ -11,7 +11,7 @@
         enable = true;
       };
       go = {
-        enable = true;
+        enable = false;
         packageSet = "stable";
         additionalPackages = [
           "gotools"
