@@ -1,16 +1,17 @@
 {
   config,
   lib,
-  systemConfig ? {},
+  systemConfig ? { },
   ...
-}: {
+}:
+{
   imports = [
     ../../modules
   ];
   config = lib.mkMerge [
     {
       home = {
-        username = "m3tam3re";
+        username = "thein3rovert";
         homeDirectory = lib.mkDefault "/home/${config.home.username}";
         stateVersion = "25.05";
       };
@@ -20,8 +21,8 @@
         git = {
           enable = true;
           difftastic.enable = true;
-          userName = "m3tam3re";
-          userEmail = "m@m3tam3re.com";
+          userName = "thein3rovert";
+          userEmail = "danielolaibi@gmail.com";
           aliases = {
             st = "status";
             logd = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
@@ -32,17 +33,17 @@
           };
         };
 
-        jujutsu = {
-          enable = true;
-          settings = {
-            user = {
-              email = "m@m3tam3re.com";
-              name = "Sascha Koenig";
-            };
-          };
-        };
+        # jujutsu = {
+        #   enable = true;
+        #   settings = {
+        #     user = {
+        #       email = "thein3rovert@example.com";
+        #       name = "thein3rovert";
+        #     };
+        #   };
+        # };
       };
     }
-    (lib.mkIf (systemConfig != {}) systemConfig)
+    (lib.mkIf (systemConfig != { }) systemConfig)
   ];
 }

@@ -33,15 +33,15 @@
       overlays = import ./overlays { inherit inputs outputs; };
 
       homeConfigurations = {
-        "m3tam3re@m3-daedalus" = home-manager.lib.homeManagerConfiguration {
+        "thein3rovert@sanctum" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."aarch64-linux";
           extraSpecialArgs = {
             inherit inputs outputs;
             systemConfig = { };
           };
           modules = [
-            ./users/m3tam3re
-            ./users/m3tam3re/profiles/server.nix
+            ./users/thein3rovert
+            ./users/thein3rovert/profiles/server.nix
           ];
         };
       };
